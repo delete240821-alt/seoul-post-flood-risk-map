@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>서울시 우체국 침수위험 지도</title>
+<title>서울시 우체국 침수위험 지도(2026년)</title>
 <style>
   body { font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; max-width: 960px; margin: 24px auto; padding: 0 16px; color: #1a1a1a; }
   h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
@@ -43,7 +43,7 @@
   <p id="pw-error" style="color:#d03b3b; font-size:13px; margin:0; display:none;">비밀번호가 틀렸습니다.</p>
 </div>
 <div id="site-content" style="display:none;">
-<h1>서울시 우체국 침수위험 지도</h1>
+<h1>서울시 우체국 침수위험 지도(2026년)</h1>
 <p class="subtitle">391개 우체국 · 종합 위험등급 (30/50/80/100년 시나리오 중 3개 이상 동의 기준) · ★ = 투자국 (155개)</p>
 <div class="legend">
   <span><span class="dot" style="background:#0ca30c"></span>저위험 (199개)</span>
@@ -71,7 +71,7 @@ document.querySelectorAll('.office-dot').forEach(function(dot) {
     document.getElementById('d-risk').style.color = dot.dataset.color;
   });
 });
-const PASSWORD_HASH = "495ac4b6f9a7332b52d1530bcd6a96219043e25bc6a389dc14f13c7128c5c944";
+const PASSWORD_HASH = "39e71545d840848a9af1a669d7e6aabf8ee95536a2f219820c450aa31f796573";
 async function sha256(text) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
   return Array.from(new Uint8Array(buf)).map(x => x.toString(16).padStart(2, '0')).join('');
